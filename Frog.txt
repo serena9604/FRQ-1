@@ -1,0 +1,96 @@
+Frog Question
+
+public boolean simulate() {
+
+boolean reachedGoal = false;
+int dist = this.goalDistance;
+int dist = 0;
+
+for (int i = 0; i < this.maxHops; i++) {
+dist += this.hopDistance();
+}
+
+if () {
+reachedGoal = true;
+}
+
+return reachedGoal;
+}
+
+
+
+
+
+
+
+
+
+Robot Question
+Part A
+
+public int nextTankToFill(int threshold) {
+
+int index = 0;
+
+int fuel = 0;
+
+for (int i = 0; i < tanks.size(); i ++) {
+
+int level = tanks[i].getFuelLevel;
+
+if (fuel < level) {
+
+fuel = level;
+
+index = i;
+
+}
+
+}
+
+return index;
+
+}
+
+
+
+
+
+Part B
+
+public void moveToLocation(int locIndex) {
+
+int index = filler.getCurrentIndex();
+
+boolean moveRight = false;
+
+int steps = 0;
+
+if (locIndex > index) {
+
+moveRight = true;
+
+}
+
+if (moveRight) {
+
+if (!filler.isFacingRight) changeDirection();
+
+steps = Math.abs(locIndex - index);
+
+moveForward(steps);
+
+} 
+
+//move left
+else if (!moveRight) {
+
+if (filler.isFacingRight) changeDirection();
+
+steps = Math.abs(locIndex - index);
+
+moveForward(steps);
+
+}
+
+}
